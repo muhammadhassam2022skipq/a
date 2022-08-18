@@ -1,0 +1,32 @@
+<p>list-courses works!</p>
+<p class="mt-5">
+    <a class="btn btn-secondary" routerLink="../add">Add User</a>
+</p>
+<table *ngIf="courses.length > 0; else noRecordTable" class="table">
+
+    <tbody>
+        <app-list-courses-detail *ngFor=" let course of courses" [course]="course"></app-list-courses-detail>
+    </tbody>
+</table>
+<ng-template #noRecordTable>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Course Title</th>
+                <th scope="col">Course Duration</th>
+                <th scope="col">Course Content</th>
+                <th scope="col">Is Course Availabe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="5">
+                    <h1 class="text-center">
+                        No record(s) found.
+                    </h1>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</ng-template>

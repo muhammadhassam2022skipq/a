@@ -1,0 +1,22 @@
+<form>
+    <div class="form-group">
+        <label for="courseTitle">Course Title</label>
+        <input type="text" class="form-control" id="courseTitle" name="courseTitle" [(ngModel)]="courseTitle" aria-describedby="emailHelp"
+            placeholder="Course Title">
+    </div>
+    <div class="form-group">
+        <label for="courseDuration">Course Duration</label>
+        <input type="text" class="form-control" id="courseDuration" name="courseDuration" [(ngModel)]="courseDuration" aria-describedby="emailHelp"
+            placeholder="Course Duration">
+    </div>
+    <div class="form-group">
+        <label for="courseContent">Course Content</label>
+        <input type="text" class="form-control" id="courseContent" name="courseContent" [(ngModel)]="courseContent" aria-describedby="emailHelp"
+            placeholder="Course Content">
+    </div>
+    <div class="form-group">
+      <label for="isAvailable">Is Currently Available</label>
+      <input type="checkbox"  id="isAvailable" name="isAvailable" [(ngModel)]="isAvailable"> Active
+    </div>
+    <button type="button" class="btn btn-primary" (click)="onCourseAddition()">Add Course</button>
+</form>
